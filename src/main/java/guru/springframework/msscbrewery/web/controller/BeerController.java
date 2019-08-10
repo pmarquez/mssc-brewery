@@ -48,7 +48,7 @@ public class BeerController {
     @DeleteMapping ({"/{beerId}"})
     public ResponseEntity deleteBeer ( @PathVariable("beerId") UUID beerId ) {
         beerService.deleteBeer ( beerId );
-
+        //   ths could have been done with a @ResponseStatus annotation
         return new ResponseEntity(HttpStatus.NO_CONTENT);
     }
 
